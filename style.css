@@ -65,5 +65,14 @@ header img {
 
     header {
         flex-direction: column;
+        margin-top: 10px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    body {
+        justify-content: flex-start;
     }
 }

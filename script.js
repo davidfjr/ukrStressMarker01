@@ -12,7 +12,9 @@ fetch('./data.json')
     });
 
 function marker(phrase) {
-    const splittedWords = phrase.replaceAll(regex, '').split(" ")
+    const splittedWords = phrase.replaceAll(regex, '')
+        .toLowerCase()
+        .split(" ")
 
     const finalList = []
 
@@ -37,3 +39,5 @@ function init() {
 
 
 
+
+//  tem q postar a atualização de lower case nas palavras
