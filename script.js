@@ -1,16 +1,18 @@
-fetch('./teste2Json.json')
+const regex = /[.,:?!'"()]/g;
+const input = document.querySelector("#input--text textarea")
+const output = document.querySelector("#output--text textarea")
+const btn = document.querySelector("#input--text button")
+
+
+fetch('./data.json')
     .then((response) => response.json())
     .then((json) => {
         data = json
-        console.log(data.боку)
         init()
     });
 
-
-function init() {
-    
-    const phrase = prompt("type phrase")
-    const splittedWords = phrase.split(" ")    
+function marker(phrase) {
+    const splittedWords = phrase.replaceAll(regex, '').split(" ")
 
     const finalList = []
 
@@ -21,11 +23,17 @@ function init() {
             finalList.push(word)
         }
     });
-    
-    alert(`the words with stress marks: \n${finalList.toString().replaceAll(",", ' ')}`)
 
+    output.value = finalList.toString().replaceAll(",", ' ')
 }
 
+
+function init() {
+    btn.addEventListener("click", () => {
+        phrase = input.value
+        marker(phrase)
+    })
+}
 
 
 
