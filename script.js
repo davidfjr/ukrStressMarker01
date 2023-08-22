@@ -1,7 +1,3 @@
-// const teste = prompt("type")
-
-
-//data = JSON.parse('testeJson.json')
 fetch('./teste2Json.json')
     .then((response) => response.json())
     .then((json) => {
@@ -12,15 +8,9 @@ fetch('./teste2Json.json')
 
 
 function init() {
-    // word = prompt("type")
-    // console.log(`the word is ${data[word]}`)
-
-
-    // isolando palavras da frase
-    const phrase = prompt("digita a frase")
-    const splittedWords = phrase.split(" ")  // tem q dar um jeito de tirar , e . e ? e ! e : 
-
-    console.log(splittedWords)
+    
+    const phrase = prompt("type phrase")
+    const splittedWords = phrase.split(" ")    
 
     const finalList = []
 
@@ -31,36 +21,11 @@ function init() {
             finalList.push(word)
         }
     });
+    
+    alert(`the words with stress marks: \n${finalList.toString().replaceAll(",", ' ')}`)
 
-    strList = finalList.toString()
-    console.log(strList)
-    alert(`a lista final é ${finalList.toString().replaceAll(",", ' ')}`)
-
-
-    // let listaFinal = []
-
-    // for (let i = 0; i < splittedWords.length; i++) {
-    //     for (let j = 0; j < wordList.length; j++) {
-    //         if (splittedWords[i] === wordList[j]) {
-    //             listaFinal += `${ diacrits[j]}, `
-    //         }
-    //     }
-    // }
-    // alert(listaFinal)
-    // console.log(listaFinal)
 }
 
 
 
 
-// var regex = /[.,\s]/g;
-
-// var result = str.replace(regex, '');
-
-// let found = ''
-    // for (let i = 0; i < wordList.length; i++) {
-    //     if (userInput === wordList[i]) {
-    //         found = userInput            
-    //         alert(found)
-    //     }
-    // } if (found === '') alert("not found")
