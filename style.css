@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    display: block;
 }
 
 head {
@@ -7,10 +8,6 @@ head {
 }
 
 body {
-    display: block;
-}
-
-#app {
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -115,14 +112,8 @@ header img {
         text-align: center;
     }
 
-    #app {
-        justify-content: flex-start;
-        margin: 0;
-        height: fit-content;
-        position: static;
-    }
-
     body {
+        justify-content: flex-start;
         margin: 0;
     }
 
