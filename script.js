@@ -2,6 +2,10 @@ const regex = /[.,:?!'"()]/g;
 const input = document.querySelector("#input--text textarea")
 const output = document.querySelector("#output--text textarea")
 const btn = document.querySelector("#input--text button")
+const modal = document.querySelector("#modal")
+const openModal = document.querySelector("#open--modal")
+const closeModal = document.querySelector(".close--modal")
+const overlay = document.querySelector(".overlay")
 
 
 fetch('./data.json')
@@ -38,6 +42,27 @@ function init() {
 }
 
 
+function toggleModal() {
+    modal.classList.toggle("hidden")
+    overlay.classList.toggle("hidden")
+}
 
+openModal.addEventListener("click", () => {
+    toggleModal()
+})
 
-//  tem q postar a atualização de lower case nas palavras
+closeModal.addEventListener("click", () => {
+    toggleModal()
+})
+
+overlay.addEventListener("click", () => {
+    toggleModal()
+})
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        if (!modal.classList.contains("hidden")) {
+            toggleModal()
+        }
+    }
+})
