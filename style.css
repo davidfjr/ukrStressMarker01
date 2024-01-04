@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    display: block;
 }
 
 head {
@@ -8,6 +7,10 @@ head {
 }
 
 body {
+    display: block;
+}
+
+#app {
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -35,7 +38,8 @@ header img {
 #output--text textarea {
     background-color: rgb(241, 241, 241);
     width: 50vw;
-    padding: 0;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #output--text {
@@ -50,7 +54,8 @@ header img {
 }
 
 #input--text textarea {
-    padding: 0;
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #modal {
@@ -90,6 +95,11 @@ header img {
     cursor: pointer;
 }
 
+/* ::placeholder {
+    padding-top: 5px;
+    padding-left: 5px;
+} */
+
 
 @media (max-width: 800px) {
 
@@ -112,8 +122,14 @@ header img {
         text-align: center;
     }
 
-    body {
+    #app {
         justify-content: flex-start;
+        margin: 0;
+        height: fit-content;
+        position: static;
+    }
+
+    body {
         margin: 0;
     }
 

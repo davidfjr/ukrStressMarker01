@@ -6,54 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ukrainian Stress Marker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/290px-Flag_of_Ukraine.svg.png"
-            alt="Ukrainian Flag">
-        <h1>Ukrainian Stress Marker</h1>
-    </header>
-    <div id="input--text">
-        <textarea placeholder="Insert text here" name="source" id="source" cols="30" rows="10"></textarea>
-        <button>Check</button>
+    <!-- a versao do github esta sem a div app pq deu ruim no celular -->
+    <div id="app">
+        <header>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/290px-Flag_of_Ukraine.svg.png"
+                alt="Ukrainian Flag">
+            <h1>Ukrainian Stress Marker</h1>
+        </header>
+        <div id="input--text">
+            <textarea placeholder="Insert text here" name="source" id="source" cols="30" rows="10"></textarea>
+            <button>Check</button>
+        </div>
+        <div id="output--text">
+            <textarea placeholder="Output will appear here" name="output" id="output" cols="30" rows="10"></textarea>
+        </div>
+
+        <p id="open--modal">ABOUT</p>
+
+        <div class="overlay close-modal hidden"></div>
+
+        <div id="modal" class="hidden">
+            <p class="close--modal close--btn">X</p>
+            <p>Hi, my name's David. <br><br>
+
+                I created this website to study Ukrainian.<br><br>
+
+                The corpus of this website was made based in a list of the 40k most used words in Ukrainian, you can see
+                it
+                here: <a
+                    href="https://en.m.wiktionary.org/wiki/Wiktionary:Frequency_lists/Ukrainian/Mixed_(2012-2022)">LINK</a><br><br>
+                Then I took a list of words I found on internet which was taken from lcorp: <a
+                    href="https://lcorp.ulif.org.ua/dictua/">LINK</a><br><br>
+                Then I crossed both lists. Unfortunatelly, this second list didn't have some very common words like,
+                після
+                and розмовляю, which I added manually.<br><br>
+                Therefore, if you enter a word with more than 2 vowels and it doesn't return with a stress mark, please
+                let
+                me know here: <a href="https://www.instagram.com/david.com.d.de.david/">LINK</a><br><br>
+                Also, if you have any problem using the site, let me know in the same link
+                You see some words return with two variants, like тебе́|те́бе. It means that such word has two possible
+                stressed syllables. You should check it in a dictionary to be sure which one to use, because sometimes
+                it's
+                a difference in the declension case, or even a different word, or just a question of preference of the
+                speaker.<br><br>
+                The website removes punctuation markers (, . ? ! etc). This is so the program can check the word in the
+                corpus.<br><br>
+                I hope this website can be useful in your studies of Ukrainian.<br><br>
+                If you'd like to connect with me, I'm here: <a
+                    href="https://www.instagram.com/david.com.d.de.david/">LINK</a>
+            </p>
+        </div>
     </div>
-    <div id="output--text">
-        <textarea placeholder="Output will appear here" name="output" id="output" cols="30" rows="10"></textarea>
-    </div>
-
-    <p id="open--modal">ABOUT</p>
-
-    <div class="overlay close-modal hidden"></div>
-
-    <div id="modal" class="hidden">
-        <p class="close--modal close--btn">X</p>
-        <p>Hi, my name's David. <br><br>
-
-            I created this website to study Ukrainian.<br><br>
-
-            The corpus of this website was made based in a list of the 40k most used words in Ukrainian, you can see it
-            here: <a
-                href="https://en.m.wiktionary.org/wiki/Wiktionary:Frequency_lists/Ukrainian/Mixed_(2012-2022)">LINK</a><br><br>
-            Then I took a list of words I found on internet which was taken from lcorp: <a
-                href="https://lcorp.ulif.org.ua/dictua/">LINK</a><br><br>
-            Then I crossed both lists. Unfortunatelly, this second list didn't have some very common words like, після
-            and розмовляю, which I added manually.<br><br>
-            Therefore, if you enter a word with more than 2 vowels and it doesn't return with a stress mark, please let
-            me know here: <a href="https://www.instagram.com/david.com.d.de.david/">LINK</a><br><br>
-            Also, if you have any problem using the site, let me know in the same link
-            You see some words return with two variants, like тебе́|те́бе. It means that such word has two possible
-            stressed syllables. You should check it in a dictionary to be sure which one to use, because sometimes it's
-            a difference in the declension case, or even a different word, or just a question of preference of the
-            speaker.<br><br>
-            The website removes punctuation markers (, . ? ! etc). This is so the program can check the word in the
-            corpus.<br><br>
-            I hope this website can be useful in your studies of Ukrainian.<br><br>
-            If you'd like to connect with me, I'm here: <a
-                href="https://www.instagram.com/david.com.d.de.david/">LINK</a>
-        </p>
-    </div>
-
 </body>
 <script src="script.js"></script>
 
